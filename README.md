@@ -46,7 +46,7 @@ print(text)
 ```
 
 More examples can be found in the directory [`examples/`](
-    https://github.com/johnyf/tla/blob/master/examples/)
+    https://github.com/tlaplus/tla_python/blob/master/examples/)
 
 To implement a new translator of TLA+ to an intended output format, either:
 - use the visitor pattern with the module `ast.visit`, or
@@ -70,7 +70,7 @@ Documentation
 =============
 
 In the [Markdown](https://en.wikipedia.org/wiki/Markdown) file
-[`doc.md`](https://github.com/johnyf/tla/blob/master/doc.md)
+[`doc.md`](https://github.com/tlaplus/tla_python/blob/master/doc.md)
 
 
 Tests
@@ -91,7 +91,7 @@ License
 [BSD-3](http://opensource.org/licenses/BSD-3-Clause), see `LICENSE` file.
 
 
-[build_img]: https://travis-ci.org/johnyf/tla.svg?branch=master
-[travis]: https://travis-ci.org/johnyf/tla
-[coverage]: https://coveralls.io/repos/johnyf/tla/badge.svg?branch=master
-[coveralls]: https://coveralls.io/r/johnyf/tla?branch=master
+[build_img]: https://travis-ci.org/tlaplus/tla_python.svg?branch=master
+[travis]: https://travis-ci.org/tlaplus/tla_python
+[coverage]: https://coveralls.io/repos/tlaplus/tla_python/badge.svg?branch=master
+[coveralls]: https://coveralls.io/r/tlaplus/tla_python?branch=master

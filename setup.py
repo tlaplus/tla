@@ -8,7 +8,7 @@ description = (
     'the temporal logic of actions.')
 README = 'README.md'
 long_description = open(README).read()
-url = 'https://github.com/johnyf/{name}'.format(name=name)
+url = 'https://github.com/tlaplus/tla_python'
 VERSION_FILE = '{name}/_version.py'.format(name=name)
 MAJOR = 0
 MINOR = 0

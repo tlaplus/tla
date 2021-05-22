@@ -2,28 +2,28 @@
 from setuptools import setup
 
 
-name = 'tla'
-description = (
+NAME = 'tla'
+DESCRIPTION = (
     'Parser and abstract syntax tree for TLA+, '
     'the temporal logic of actions.')
 README = 'README.md'
 long_description = open(README).read()
-url = 'https://github.com/tlaplus/tla_python'
-VERSION_FILE = '{name}/_version.py'.format(name=name)
+URL = 'https://github.com/tlaplus/tla_python'
+VERSION_FILE = '{name}/_version.py'.format(name=NAME)
 MAJOR = 0
 MINOR = 0
 MICRO = 2
-version = '{major}.{minor}.{micro}'.format(
+VERSION = '{major}.{minor}.{micro}'.format(
     major=MAJOR, minor=MINOR, micro=MICRO)
 s = (
     '# This file was generated from `setup.py`\n'
-    "version = '{version}'\n").format(version=version)
-install_requires = [
+    "version = '{version}'\n").format(version=VERSION)
+INSTALL_REQUIRES = [
     'infix >= 1.2',
     'ply >= 3.4, <= 3.10',
     ]
-tests_require = ['nose']
-classifiers = [
+TESTS_REQUIRE = ['nose']
+CLASSIFIERS = [
     'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Developers',
     'Intended Audience :: Science/Research',
@@ -38,7 +38,7 @@ classifiers = [
     'Topic :: Scientific/Engineering',
     'Topic :: Software Development :: Compilers',
     ]
-keywords = [
+KEYWORDS = [
     'TLA+', 'TLA', 'temporal logic of actions',
     'formal', 'specification',
     'expression', 'formula', 'module',
@@ -54,21 +54,21 @@ def run_setup():
     with open(VERSION_FILE, 'w') as f:
         f.write(s)
     setup(
-        name=name,
-        version=version,
-        description=description,
+        name=NAME,
+        version=VERSION,
+        description=DESCRIPTION,
         long_description=long_description,
         long_description_content_type='text/markdown',
         author='Ioannis Filippidis',
         author_email='jfilippidis@gmail.com',
-        url=url,
+        url=URL,
         license='BSD',
-        install_requires=install_requires,
-        tests_require=tests_require,
-        packages=[name],
-        package_dir={name: name},
-        classifiers=classifiers,
-        keywords=keywords)
+        install_requires=INSTALL_REQUIRES,
+        tests_require=TESTS_REQUIRE,
+        packages=[NAME],
+        package_dir={NAME: NAME},
+        classifiers=CLASSIFIERS,
+        keywords=KEYWORDS)
 
 
 if __name__ == '__main__':

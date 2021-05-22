@@ -7,7 +7,8 @@ DESCRIPTION = (
     'Parser and abstract syntax tree for TLA+, '
     'the temporal logic of actions.')
 README = 'README.md'
-long_description = open(README).read()
+with open(README) as f:
+    long_description = f.read()
 URL = 'https://github.com/tlaplus/tla_python'
 VERSION_FILE = '{name}/_version.py'.format(name=PACKAGE_NAME)
 MAJOR = 0

@@ -90,7 +90,7 @@ def print_error(verbose, ouch, error):
     if not error.error_.err_exps:
         exps = ''
     else:
-        exps = 'Expecting one of \{{s}\n'.format(
+        exps = 'Expecting one of:  {s}\n'.format(
             s='\n'.join(error.error_.err_exps))
     if verbose:
         ints = ''.join(

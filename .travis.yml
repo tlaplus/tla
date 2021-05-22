@@ -20,7 +20,7 @@ install:
 
 script:
   - cd tests/
-  - nosetests --with-coverage --cover-package=tla
+  - pytest -v --continue-on-collection-errors .
 
 after_success:
   - coveralls

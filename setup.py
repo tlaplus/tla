@@ -24,7 +24,7 @@ INSTALL_REQUIRES = [
     'infix >= 1.2',
     'ply >= 3.4, <= 3.10',
     ]
-TESTS_REQUIRE = ['nose']
+TESTS_REQUIRE = ['pytest >= 4.6.11']
 CLASSIFIERS = [
     'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Developers',

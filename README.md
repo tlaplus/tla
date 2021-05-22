@@ -76,11 +76,11 @@ In the [Markdown](https://en.wikipedia.org/wiki/Markdown) file
 Tests
 =====
 
-Require [`nose`](https://pypi.python.org/pypi/nose). Run with:
+Use [`pytest`](https://pypi.org/project/pytest). Run with:
 
 ```shell
 cd tests/
-nosetests .
+pytest -v --continue-on-collection-errors .
 ```
 
 See also the file `tests/README.md`.

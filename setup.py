@@ -2,20 +2,20 @@
 from setuptools import setup
 
 
-NAME = 'tla'
+PACKAGE_NAME = 'tla'
 DESCRIPTION = (
     'Parser and abstract syntax tree for TLA+, '
     'the temporal logic of actions.')
 README = 'README.md'
 long_description = open(README).read()
 URL = 'https://github.com/tlaplus/tla_python'
-VERSION_FILE = '{name}/_version.py'.format(name=NAME)
+VERSION_FILE = '{name}/_version.py'.format(name=PACKAGE_NAME)
 MAJOR = 0
 MINOR = 0
 MICRO = 2
 VERSION = '{major}.{minor}.{micro}'.format(
     major=MAJOR, minor=MINOR, micro=MICRO)
-s = (
+VERSION_FILE_TEXT = (
     '# This file was generated from `setup.py`\n'
     "version = '{version}'\n").format(version=VERSION)
 INSTALL_REQUIRES = [
@@ -52,9 +52,9 @@ KEYWORDS = [
 def run_setup():
     """Write version file and install package."""
     with open(VERSION_FILE, 'w') as f:
-        f.write(s)
+        f.write(VERSION_FILE_TEXT)
     setup(
-        name=NAME,
+        name=PACKAGE_NAME,
         version=VERSION,
         description=DESCRIPTION,
         long_description=long_description,
@@ -65,8 +65,8 @@ def run_setup():
         license='BSD',
         install_requires=INSTALL_REQUIRES,
         tests_require=TESTS_REQUIRE,
-        packages=[NAME],
-        package_dir={NAME: NAME},
+        packages=[PACKAGE_NAME],
+        package_dir={PACKAGE_NAME: PACKAGE_NAME},
         classifiers=CLASSIFIERS,
         keywords=KEYWORDS)
 

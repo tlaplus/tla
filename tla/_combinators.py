@@ -9,6 +9,7 @@
 #
 from __future__ import absolute_import
 from __future__ import division
+import collections.abc
 import copy
 import functools
 import logging
@@ -1026,9 +1027,7 @@ def sep(sp, ap):
 #    *)
 
 
-import collections
-
-class ListSlice(collections.Sequence):
+class ListSlice(collections.abc.Sequence):
 
     def __init__(self, alist, start):
         self.alist = alist

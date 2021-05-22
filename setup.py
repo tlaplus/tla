@@ -19,6 +19,7 @@ VERSION = '{major}.{minor}.{micro}'.format(
 VERSION_FILE_TEXT = (
     '# This file was generated from `setup.py`\n'
     "version = '{version}'\n").format(version=VERSION)
+PYTHON_REQUIRES = '>=3.6'
 INSTALL_REQUIRES = [
     'infix >= 1.2',
     'ply >= 3.4, <= 3.10',
@@ -64,6 +65,7 @@ def run_setup():
         author_email='jfilippidis@gmail.com',
         url=URL,
         license='BSD',
+        python_requires=PYTHON_REQUIRES,
         install_requires=INSTALL_REQUIRES,
         tests_require=TESTS_REQUIRE,
         packages=[PACKAGE_NAME],

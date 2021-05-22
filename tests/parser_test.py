@@ -44,16 +44,16 @@ expr_tests = [
     " {FALSE, FALSE} ",
     " SUBSET A.r ",
     " UNION {S \\in A:  S \\cap Q # {}} ",
-    " {x \in Int:  x < 0} ",
+    " {x \\in Int:  x < 0} ",
     # functions
     " [foo |-> FALSE] ",
     " [foo |-> FALSE, bar |-> FALSE] ",
     " [FALSE -> FALSE] ",
-    " [x, y \in S, uv \in T |-> G(x, y, uv[1], uv[2])] ",
+    " [x, y \\in S, uv \\in T |-> G(x, y, uv[1], uv[2])] ",
     # " [x, y \in S, <<u, v>> \in T |-> G(x, y, u, v)] ",
     " f[x]' ",
     " f[k + 1, r] ",
-    " [(A \cup B) -> C] ",
+    " [(A \\cup B) -> C] ",
     " [a |-> u + v, b |-> w] ",
     " [a: Int, b: A \cup B] ",
     # EXCEPT
@@ -66,7 +66,7 @@ expr_tests = [
     " <<TRUE>> ",
     " <<TRUE, TRUE>> ",
     " <<1, 2, 3 + 5 >> ",
-    " Int \X (1..2) \X Real ",
+    " Int \\X (1..2) \\X Real ",
     # actions
     " (TRUE + 1)' ",
     " (1 + 2)' /\\ 3 ",
@@ -75,11 +75,11 @@ expr_tests = [
     " <<TRUE>>_TRUE ",
     " [x' = x + 1]_<<x, y>> ",
     " <<x' = x + 1>>_<<x, y>> ",
-    " [M \/ N]_<<u, v>> ",
+    " [M \\/ N]_<<u, v>> ",
     " <<x' = x + 1>>_(x * y) ",
     # liveness formulas
     " WF_TRUE (TRUE) ",
-    " WF_<<x, y>>(N /\ M)",
+    " WF_<<x, y>>(N /\\ M)",
     " WF_x(N) ",
     " SF_TRUE(TRUE) ",
     # `LAMBDA`

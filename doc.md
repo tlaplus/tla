@@ -109,7 +109,7 @@ is for defining the syntax tree node classes to use when parsing.
 ```python
 from tla import parser
 
-expr = '[n \in Nat |-> n + 1]'
+expr = r'[n \in Nat |-> n + 1]'
 tree = parser.parse_expr(expr)
 ```
 
@@ -152,8 +152,8 @@ from tla import parser
 from tla import to_str
 
 definitions = dict(
-    Foo=parser.parse_expr('x /\ y', nodes=to_str.Nodes),
-    Bar=parser.parse_expr('[n \in Nat |-> n + 2]', nodes=to_str.Nodes))
+    Foo=parser.parse_expr(r'x /\ y', nodes=to_str.Nodes),
+    Bar=parser.parse_expr(r'[n \in Nat |-> n + 2]', nodes=to_str.Nodes))
 ```
 
 We now define a subclass of the class `tla.visit.NodeTransformer` that
@@ -180,7 +180,7 @@ and perform the substitutions of the operators `Foo` and `Bar` with the
 expressions that have been parsed above.
 
 ```python
-tree = parser.parse_expr('Foo /\ (Bar = f)', nodes=to_str.Nodes)
+tree = parser.parse_expr(r'Foo /\ (Bar = f)', nodes=to_str.Nodes)
 visitor = DefinitionExpander()
 new_tree = visitor.visit(tree, definitions=definitions)
 print(new_tree.to_str(width=80))

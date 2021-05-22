@@ -297,7 +297,7 @@ class Lexer(object):
     # (* numbers *)
     # | (numeral+ as ch) '.' (numeral+ as man)
     #   { [ NUM (ch, man) ] }
-    float = '{numeral}+\.{numeral}+'.format(
+    float = r'{numeral}+\.{numeral}+'.format(
         numeral=numeral)
 
     @ply.lex.TOKEN(float)
@@ -641,7 +641,7 @@ def _join_with_newlines(tokens):
     return ''.join(strings)
 
 
-MODULE_FOO = '''
+MODULE_FOO = r'''
 comments
 ---- MODULE Foo ----
 VARIABLE x

@@ -10,6 +10,10 @@ README = 'README.md'
 with open(README) as f:
     long_description = f.read()
 URL = 'https://github.com/tlaplus/tla_python'
+PROJECT_URLS = {
+    'Bug Tracker': 'https://github.com/tlaplus/tla_python/issues',
+    'Documentation':
+        'https://github.com/tlaplus/tla_python/blob/master/doc.md'}
 VERSION_FILE = '{name}/_version.py'.format(name=PACKAGE_NAME)
 MAJOR = 0
 MINOR = 0
@@ -64,6 +68,7 @@ def run_setup():
         author='Ioannis Filippidis',
         author_email='jfilippidis@gmail.com',
         url=URL,
+        project_urls=PROJECT_URLS,
         license='BSD',
         python_requires=PYTHON_REQUIRES,
         install_requires=INSTALL_REQUIRES,

@@ -88,7 +88,7 @@ See also the file `tests/README.md`.
 
 License
 =======
-[BSD-3](http://opensource.org/licenses/BSD-3-Clause), see `LICENSE` file.
+[BSD-3](https://opensource.org/licenses/BSD-3-Clause), see `LICENSE` file.
 
 
 [build_img]: https://travis-ci.org/tlaplus/tla_python.svg?branch=master
